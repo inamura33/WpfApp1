@@ -18,6 +18,8 @@
     </UserControl.Resources>
     <Grid>
         <!-- 描画用のキャンバス -->
-        <Canvas Name="myCanvas" Loaded="MyCanvas_Loaded" SizeChanged="MyCanvas_SizeChanged" MouseWheel="MyCanvas_MouseWheel" MouseRightButtonDown="MyCanvas_MouseRightButtonDown"/>
+        <Canvas Name="myCanvas" Loaded="MyCanvas_Loaded" SizeChanged="MyCanvas_SizeChanged" Margin="0,102,0,63"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click_1"/>
     </Grid>
 </UserControl>

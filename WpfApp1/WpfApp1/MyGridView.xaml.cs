@@ -23,6 +23,7 @@ namespace WpfApp1
     public partial class MyGridView : UserControl
     {
         //private  int GRID_SIZE = 20;
+        int delta = 20;
         public MyGridView()
         {
             InitializeComponent();
@@ -30,13 +31,14 @@ namespace WpfApp1
 
         private void MyCanvas_Loaded(object sender, RoutedEventArgs e)
         {
+            delta = 20;
 
-            BuildView(20);
+            BuildView(delta);
         }
 
         private void MyCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            BuildView(20);
+            BuildView(delta);
         }
         // キャンバスに線を描画する
         private void BuildView(int GRID_SIZE)
@@ -82,11 +84,28 @@ namespace WpfApp1
 
         private void MyCanvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
+
+        }
+
+        private void myCanvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
             //MessageBox.Show("ころころ");
             //int delta = Math.Abs(e.Delta / 120);
-            System.Diagnostics.Debug.WriteLine("ぽち");
-            int delta = 10;
-            BuildView(20 + (delta * 2));
+            System.Diagnostics.Debug.WriteLine("増ぽち");
+            delta = delta*2;
+            BuildView(delta);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("減ぽち");
+            delta = delta / 2;
+            BuildView(delta);
         }
     }
 }

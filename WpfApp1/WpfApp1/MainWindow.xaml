@@ -11,6 +11,6 @@
     
     <Grid>
         <!-- ユーザーコントロールを配置 -->
-        <my:MyGridView></my:MyGridView>
+        <my:MyGridView Margin="10,67,-10,35"></my:MyGridView>
     </Grid>
 </Window>
